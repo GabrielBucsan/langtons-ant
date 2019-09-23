@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Langton's Ant</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="main.css"/>
+    <script src="utils/mathUtils.js"></script>
+    <script src="objects/cell.js"></script>
+    <script src="objects/ant.js"></script>
+    <script src="main.js"></script>
+    <script src="canvas.js"></script>
+</head>
+<body>
+    <div class="row">
+        <canvas></canvas>
+        <div class="column width-300px padding-10px">
+            <span>Number of Iterations per Cycle</span>
+            <form oninput="iterationRangeOut.value = iterationRange.valueAsNumber" class='row'>
+                <input type="range" name="iterationRange" id="iterationRange" min="1" max="1000" value="1" class='fill-width'>
+                <output name="iterationRangeOut" for="iterationRange">1</output>
+            </form>
+            <span>Cell Size</span>
+            <form oninput="cellRangeOut.value = cellRange.valueAsNumber" class='row'>
+                <input type="range" name="cellRange" id="cellRange" min="1" max="2" value="1" class='fill-width'>
+                <output name="cellRangeOut" for="cellRange">1</output>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
